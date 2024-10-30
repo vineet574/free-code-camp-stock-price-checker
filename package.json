@@ -1,0 +1,22 @@
+{
+  "name": "free-code-camp-stock-price-checker",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha",  // Updated test script to run Mocha
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "chai": "^5.1.2",
+    "chai-http": "^5.1.1",
+    "express": "^4.21.1",
+    "helmet": "^8.0.0",
+    "mocha": "^10.8.1",
+    "node-fetch": "^3.3.2"
+  }
+}
+
