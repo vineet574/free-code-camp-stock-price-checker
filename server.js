@@ -7,9 +7,15 @@ const app = express();
 // Security headers
 app.use(helmet.contentSecurityPolicy({
     directives: {
-        defaultSrc: ["'self'"],
-        scriptSrc: ["'self'"],
-        styleSrc: ["'self'"]
+        defaultSrc: ["'self'"],          // Default policy for loading content
+        scriptSrc: ["'self'"],           // Only allow scripts from the same origin
+        styleSrc: ["'self'"],            // Only allow styles from the same origin
+        imgSrc: ["'self'"],              // Only allow images from the same origin
+        connectSrc: ["'self'"],          // Only allow connections (e.g., APIs) from the same origin
+        frameSrc: ["'self'"],            // Allow iframes only from the same origin
+        fontSrc: ["'self'"],             // Allow fonts only from the same origin
+        objectSrc: ["'none'"],           // Block all object sources
+        upgradeInsecureRequests: []       // Automatically upgrade HTTP requests to HTTPS
     }
 }));
 
