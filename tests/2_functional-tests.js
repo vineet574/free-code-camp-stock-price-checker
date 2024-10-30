@@ -50,6 +50,8 @@ suite('Functional Tests', () => {
             .end((err, res) => {
                 assert.equal(res.status, 200);
                 assert.isArray(res.body.stockData);
+                assert.property(res.body.stockData[0], 'symbol');
+                assert.property(res.body.stockData[1], 'symbol');
                 done();
             });
     });
@@ -62,7 +64,9 @@ suite('Functional Tests', () => {
                 assert.equal(res.status, 200);
                 assert.isArray(res.body.stockData);
                 assert.property(res.body.stockData[0], 'rel_likes');
+                assert.property(res.body.stockData[1], 'rel_likes');
                 done();
             });
     });
 });
+
